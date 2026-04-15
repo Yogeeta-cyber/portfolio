@@ -20,13 +20,13 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero fade-in">
         <h2>Hello, I'm Yogeeta Arya 👋</h2>
         <p>Fresher | Aspiring Python with DevOps</p>
         <a href="#projects" class="btn">View Projects</a>
     </section>
 
-    <section id="about">
+    <section id="about" class="fade-in">
         <h2>About Me</h2>
         <p>
             I am a motivated fresher with a strong interest in Python development, Artificial Intelligence,
@@ -36,7 +36,7 @@
         </p>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="fade-in">
         <h2>Skills</h2>
         <div class="skills">
             <span>Python</span>
@@ -53,7 +53,7 @@
         </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="fade-in">
         <h2>Projects</h2>
 
         <div class="project">
@@ -63,7 +63,7 @@
                 human-like conversations. Implemented intent recognition and response generation
                 for interactive user communication.
             </p>
-            <a href="#">GitHub</a>
+            <a href="https://github.com/Yogeeta-cyber">GitHub</a>
             <a href="#">Live</a>
         </div>
 
@@ -73,8 +73,8 @@
                 Designed and developed a responsive portfolio website using HTML and CSS to showcase
                 projects, skills, and professional information with a clean and modern user interface.
             </p>
-            <a href="https://github.com/Yogeeta-cyber">GitHub</a>
-            <a href="#">Live</a>
+            <a href="https://github.com/Yogeeta-cyber" target="_blank">GitHub</a>
+            <a href="https://yogeeta-cyber.github.io/portfolio/" target="_blank">Live</a>
         </div>
 
         <div class="project">
@@ -83,13 +83,13 @@
                 Built a basic e-commerce website featuring product listings and cart functionality
                 using HTML, CSS, and JavaScript, focusing on user-friendly design and interactivity.
             </p>
-            <a href="#">GitHub</a>
+            <a href="https://github.com/Yogeeta-cyber">GitHub</a>
             <a href="#">Live</a>
         </div>
 
     </section>
 
-    <section id="contact">
+    <section id="contact" class="fade-in">
         <h2>Contact</h2>
         <p>Email: yogeetaarya07@gmail.com</p>
         <p>LinkedIn: https://www.linkedin.com/in/yogeetaarya/</p>
@@ -99,6 +99,22 @@
     <footer>
         <p>© 2026 Yogeeta Arya</p>
     </footer>
+    <script>
+const elements = document.querySelectorAll('.fade-in');
+
+function checkScroll() {
+    elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+            el.classList.add('show');
+        }
+    });
+}
+
+window.addEventListener('scroll', checkScroll);
+window.addEventListener('load', checkScroll);
+    </script>
+    
 
 </body>
 </html>
